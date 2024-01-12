@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Bash script that configures a server
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
