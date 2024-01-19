@@ -1,0 +1,42 @@
+what_happens_when_your_type_google_com_in_your_browser_and_press_enter?
+As you surf the internet and request for a particular action to be taken, the question of how the internet works might comes to your and you're curious to discover the mystery behind. Mind you, there isn't anything mysterious about the internet but stay glued as I give detailed explanation of what happens when you type in google.com on your computer or perhaps surf the internet.
+
+There are various concept this blog post will address for full understanding of the subject in discussion. These concepts are:
+
+• DNS request
+
+• TCP/IP
+
+• Firewall
+
+• HTTPS/SSL
+
+• Load-balancer
+
+• Web server
+
+• Application server
+
+• Database
+
+Before diving into those concepts listed above, there is one particular concept we need to be aware of, which is the URL.
+
+• What is URL? URL stands for Uniform Resource Location and it is used to gain access to a website. The URL is broken into many parts which are the protocol, hostname,port and path-and-filename and more, but for the sake of confining our knowledge to this blog post. I will be talking about the protocol and hostname. https ---> is the protocol while google.com is the hostname which is also the domain name. This brings us to our very first concept to talk about which is the DNS request.
+
+• DNS REQUEST: DNS request A DNS request starts when you try to access a computer on the internet. For example, you type google.com in your browser address bar. The first stop for the DNS request is the local DNS cache. As you access different computers, those IP addresses get stored in a local repository. If you visited google.com before, you have the IP address in your cache. If you don’t have the IP address in your local DNS cache, DNS will check with a recursive DNS server. Your Internet Service Provider (ISP) usually provides a recursive DNS server for this purpose. The recursive DNS server has its own cache, and if it has the IP address, it will return it to you. If not, it will go ask another DNS server. The next stop is the TLD name servers, in this case, the TLD name server for the .com addresses. These servers don’t have the IP address we need, but it can send the DNS request in the right direction. What the TLD name servers do have is the location of the authoritative name server for the requested site. The authoritative name server responds with the IP address for google.com and the recursive DNS server stores it in the local DNS cache and returns the address to your computer. Your local DNS service gets the IP address and connects to google.com to download all the glorious content. DNS then records the IP address in local cache with a time-to-live (TTL) value. The TTL is the amount of time the local DNS record is valid, and after that time, DNS will go through the process again when you request google.com the next time.
+
+• TCP/IP:
+
+TCP/IP The browser now knows the IP address of the server, it needs to find a way to pass this request all the way to the server. When you place the order, it’s not just you interacting with the waiter. There’s another end being managed with the need to check that the restaurant kitchen is ready to accept the order, payments and so on. Similarly, there’s a lot of stuff that needs to be managed for smooth communication between browser and server. TCP/IP functionality is divided into four layers, each with its own set of agreed-upon protocols: The link layer consists of methods and protocols that operate only on a link, which is the network component that interconnects nodes or hosts in the network. Protocols in the layer include Ethernet and Address Resolution Protocol. The internet (or networking) layer connects independent networks to transport the packets containing the data across network boundaries. Protocols are IP and Internet Control Message Protocol. The transport layer handles communications between hosts and is responsible for flow control, reliability, and multiplexing. Protocols include TCP and User Datagram Protocol. The application layer standardizes data exchange for applications. Protocols include Hyper Text Transfer Protocol, File Transfer Protocol, Post Office Protocol Version 3, Simple Mail Transfer Protocol, and Simple Network Time Protocol.
+
+• FIREWALL: Firewall Web servers use a firewall to protect the system against breaches and attacks. For example, if a source starts flooding the web server hosting google.com with a large number of concurrent requests, the firewall will detect the problem and block requests from that IP address to keep them from reaching the web server.
+
+• HTTPS/SSL HTTPS: It stands for (Hyper Text Transfer Protocol Secure). This appears in the URL when a website is secured by an SSL certificate. The details of the certificate, including the issuing authority and the corporate name of the website owner, can be viewed by clicking on the lock symbol on the browser bar. SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems, preventing criminals from reading and modifying any information transferred, including potential personal details. It does this by making sure that any data transferred between users and sites, or between two systems remain impossible to read. It uses encryption algorithms.
+
+•LOAD BALANCER: Load-balancer A load balancer is a device that acts as a reverse proxy and distributes network or application traffic across a number of servers, increasing concurrent users and reliability of applications. If a server goes down, it starts redirecting the requests to different servers that are online. Popular websites have to serve several thousands of concurrent requests and return correct text, image and video responses to them. To serve a large number of requests, the content is usually distributed across multiple servers.
+
+• WEB SERVER: A web server is computer software and underlying hardware that accepts requests via HTTP (the network protocol created to distribute web content) or its secure variant HTTPS. When you request google.com, the HTTP server checks whether the requested URL matches any existing files, and if found, sends the files’ content back to the browser, or sends a “404 Not Found” error.
+
+• APPLICATION SERVER: An application server exposes business logic to the clients, which generates dynamic content. It is a software framework that transforms data to provide the specialized functionality offered by a business, service, or application. Application servers enhance the interactive parts of a website that can appear differently depending on the context of the request
+
+• DATABASE: A database is an organized collection of data stored and accessed electronically. Web servers do fetch data from a database and when you type google.com on your browser a server will query a database for your search then fetch it and gives you a feedback. https://taiwoforbes.hashnode.dev/0x11-whathappenswhenyourtypegooglecominyourbrowserandpressenter.
