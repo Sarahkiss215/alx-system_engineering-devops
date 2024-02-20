@@ -5,9 +5,6 @@
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
-
-        # SSL configuration
-
         root /var/www/html;
 
         # Add index.php to the list if you are using PHP
@@ -30,11 +27,15 @@ server {
 
         location /hbnb_static {
                 alias /data/web_static/current/;
-		index index.html;
         }
 
         location /airbnb-onepage/ {
                 include proxy_params;
                 proxy_pass http://0.0.0.0:5000;
+        }
+
+        location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                include proxy_params;
+                proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;
         }
 }
